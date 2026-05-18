@@ -15,7 +15,7 @@ export default defineConfig({
       },
       includeAssets: ["icons/*.png", "screenshots/*.jpg"],
       manifest: {
-        name: "PWA Test App",
+        name: "SkyGo",
         short_name: "PWATest",
         description: "A Progressive Web App built with React and Vite",
         start_url: "/?source=pwa",
