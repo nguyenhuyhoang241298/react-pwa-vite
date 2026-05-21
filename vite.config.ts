@@ -16,35 +16,35 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
-      includeAssets: ["icons/*.png", "icons/*.ico", "screenshots/*.png"],
+      includeAssets: ["pwa/*.png", "pwa/*.ico", "pwa/*.svg"],
       manifest: {
         name: "SkyGo",
         short_name: "SkyGo",
-        description: "A Progressive Web App built with React and Vite",
+        description: "Fly to your dream",
         start_url: "/?source=pwa",
         scope: "/",
         display: "standalone",
         background_color: "#ffffff",
-        theme_color: "#42b883",
+        theme_color: "#0a0f1e",
         lang: "en",
         icons: [
           {
-            src: "icons/pwa-64x64.png",
+            src: "pwa/pwa-64x64.png",
             sizes: "64x64",
             type: "image/png",
           },
           {
-            src: "icons/pwa-192x192.png",
+            src: "pwa/pwa-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "icons/pwa-512x512.png",
+            src: "pwa/pwa-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "icons/maskable-icon-512x512.png",
+            src: "pwa/maskable-icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
@@ -52,14 +52,14 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: "screenshots/apple-splash-landscape-light-1334x750.png",
+            src: "pwa/apple-splash-landscape-1334x750.png",
             sizes: "1334x750",
             type: "image/png",
             form_factor: "wide",
             label: "SkyGo — Desktop",
           },
           {
-            src: "screenshots/apple-splash-portrait-light-750x1334.png",
+            src: "pwa/apple-splash-portrait-750x1334.png",
             sizes: "750x1334",
             type: "image/png",
             form_factor: "narrow",
