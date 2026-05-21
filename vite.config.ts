@@ -10,13 +10,16 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "prompt",
+      pwaAssets: {
+        config: "pwa-assets.config.ts",
+      },
       devOptions: {
         enabled: true,
       },
-      includeAssets: ["icons/*.png", "screenshots/*.jpg"],
+      includeAssets: ["icons/*.png", "icons/*.ico", "screenshots/*.png"],
       manifest: {
         name: "SkyGo",
-        short_name: "PWATest",
+        short_name: "SkyGo",
         description: "A Progressive Web App built with React and Vite",
         start_url: "/?source=pwa",
         scope: "/",
@@ -26,25 +29,22 @@ export default defineConfig({
         lang: "en",
         icons: [
           {
-            src: "icons/manifest-icon-192.maskable.png",
-            sizes: "192x192",
+            src: "icons/pwa-64x64.png",
+            sizes: "64x64",
             type: "image/png",
-            purpose: "any",
           },
           {
-            src: "icons/manifest-icon-192.maskable.png",
+            src: "icons/pwa-192x192.png",
             sizes: "192x192",
             type: "image/png",
-            purpose: "maskable",
           },
           {
-            src: "icons/manifest-icon-512.maskable.png",
+            src: "icons/pwa-512x512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any",
           },
           {
-            src: "icons/manifest-icon-512.maskable.png",
+            src: "icons/maskable-icon-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
@@ -52,23 +52,23 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: "screenshots/apple-splash-1334-750.jpg",
+            src: "screenshots/apple-splash-landscape-light-1334x750.png",
             sizes: "1334x750",
-            type: "image/jpeg",
+            type: "image/png",
             form_factor: "wide",
-            label: "PWA Test App — Desktop",
+            label: "SkyGo — Desktop",
           },
           {
-            src: "screenshots/apple-splash-750-1334.jpg",
+            src: "screenshots/apple-splash-portrait-light-750x1334.png",
             sizes: "750x1334",
-            type: "image/jpeg",
+            type: "image/png",
             form_factor: "narrow",
-            label: "PWA Test App — Mobile",
+            label: "SkyGo — Mobile",
           },
         ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg}"],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
         navigateFallback: "index.html",
         runtimeCaching: [
           {
